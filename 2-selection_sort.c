@@ -3,6 +3,7 @@
  * selection_sort - function that uses selection sort to sort an array
  * @array: Array to be sorted
  * @size: size/length of the array
+ * Return: Nothing
  */
 void selection_sort(int *array, size_t size)
 {
