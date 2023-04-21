@@ -8,12 +8,12 @@
 void selection_sort(int *array, size_t size)
 {
 	size_t i, j;
-	
+
 	/* Interate the array 1 index at a time */
 	for (i = 0; i < size - 1; i++)
 	{
 		size_t min_val = i;
-		
+
 		/* find index of min number in unsorted array */
 		for (j = i + 1; j < size; j++)
 		{
@@ -26,6 +26,7 @@ void selection_sort(int *array, size_t size)
 		if (min_val != i)
 		{
 			size_t temp;
+
 			temp = array[i];
 			array[i] = array[min_val];
 			array[min_val] = temp;
