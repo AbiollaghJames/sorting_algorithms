@@ -28,7 +28,7 @@ void quick_sort(int *array, size_t size)
 	{
 		if (array[j] <= array[p])
 		{
-			if (array[i] != array[j])
+			if (array[j] != array[i])
 			{
 				swap(&array[i], &array[j]);
 				print_array(array, size);
@@ -36,11 +36,11 @@ void quick_sort(int *array, size_t size)
 			i++;
 		}
 	}
-	if (array[i] != array[size - 1])
+	if (array[size - 1] != array[i])
 	{
 		swap(&array[i], &array[size - 1]);
 		print_array(array, size);
 	}
 	quick_sort(array, i);
-	quick_sort(array + i + 1, size - i - 1);
+	quick_sort(array, size - i);
 }
